@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #141E30, #243B55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.calculator {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    width: 320px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+#display {
+    width: 100%;
+    height: 70px;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: white;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    height: 60px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.clear {
+    background: #ff4d4d;
+    color: white;
+}
+
+.equal {
+    background: #28a745;
+    color: white;
+    grid-row: span 2;
+    height: 130px;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+button:not(.clear):not(.equal) {
+    background: white;
+}
+
+/* History Panel */
+
+.history-panel {
+    width: 250px;
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    color: white;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    overflow-y: auto;
+    max-height: 500px;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.history-header h2{
+    font-size: 30px;
+    color: black;
+          
+}
+.history-header button {
+    height: 35px;
+    min-width: 70px;
+    padding: 0 15px;
+    background: crimson;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#historyList {
+    list-style: none;
+}
+
+#historyList li {
+    background: rgba(255,255,255,0.2);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#historyList li:hover {
+    background: rgba(255,255,255,0.4);
+}
+.history-header button:hover{
+    background: white;
+}
